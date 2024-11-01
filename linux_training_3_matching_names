@@ -1,0 +1,48 @@
+#****** Matching files Names with Shell expansions page 81**********
+#3/11/2024
+#Shaker samiy (shaker.samiy@gmail.com -- +201068448613)
+
+#making a directory(exercies2) to practice your training:
+
+mkdir ex3
+
+#change directory going into exercies2:
+
+cd ex3#****** Making links between files page 79**********
+#2/11/2024
+#Shaker samiy (shaker.samiy@gmail.com -- +201068448613)
+
+#making a directory(exercies2) to practice your training:
+#change directory going into exercies3:
+
+mkdir ex3; cd ex3
+
+#making some empty files for practicing:
+
+touch adel alaa amgad kala bdader car Ahmed Bach t24 2d4  5  ds k-f
+
+# list the files that has letter a and and number of chacter before it even no character
+ls *a
+
+# list the files that has a name consist of 1 letter 
+
+ls ?
+
+# list the files that has a name consist of 2 letter 
+
+ls ??
+
+# list the files that has a name consist of 3 letter 
+
+ls ???
+
+# list the files that has a name consist of 4 letter 
+
+ls ????
+
+# list the files that has a name consist of 1 letter or more  
+
+ls ?*
+
+
+#to be continue
