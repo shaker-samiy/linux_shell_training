@@ -1,0 +1,147 @@
+## Managing files using command line tools redhatbook  page 70
+#1/11/2024
+#Shaker samiy (shaker.samiy@gmail.com -- +201068448613)
+
+#Determing currecnt directory
+
+pwd
+#creating a directory to testing
+
+mkdir ex1
+
+#change location to ex1
+
+cd ex1
+
+#creating 3 new directories in current loaction
+
+mkdir music pictures videos
+
+#creating 6 new sound files
+# press space after each "\"
+
+touch song1.mp3\
+	  song2.mp3\
+	  song3.mp3\
+	  song4.mp3\ 
+	  song5.mp3\
+	  song6.mp3
+	  
+#creating 6 new image files
+# press space after each "\"
+
+touch snap1.jpg\ 
+	  snap2.jpg\
+      snap3.jpg\
+	  snap4.jpg\
+      snap5.jpg\
+      snap6.jpg 
+	  
+#creating 6 new video files
+# press space after each "\"
+
+touch film1.avi\
+      film2.avi\
+      film3.avi\
+      film4.avi\
+	  film5.avi\
+	  film6.avi
+
+# moving soud files into music files into film directory
+# press space after each "\"	 
+ 
+mv song1.mp3 song2.mp3 song3.mp3 song4.mp3 song5.mp3 song6.mp3 music
+	  
+# moving image files into video files into film directory
+# press space after each "\"
+
+mv film1.avi\
+>  film2.avi\
+>  film3.avi\
+>  film4.avi\
+>  film5.avi\
+>  film6.avi\
+>  videos
+	  	
+# moving image files into pictures directory
+mv snap1.jpg snap2.jpg snap3.jpg snap4.jpg snap5.jpg snap6.jpg pictures	 
+
+#list all the directories and the files inside it 
+	  
+ls -laR
+
+#making 3 new directories in current loaction
+mkdir friends family work
+
+# chang directory going into friends directory:
+
+cd friends
+
+#Copy all types of files ends with 1,2 to friends directory:
+# press space after each "\"
+
+cp ~/ex1/music/song1.mp3
+ ~/ex1/music/song2.mp3
+ ~/ex1/videos/film1.avi
+ ~/ex1/videos/film2.avi
+ ~/ex1/pictures/snap1.jpg
+ ~/ex1/pictures/snap2.jpg
+ .
+
+# chang directory going into family directory:
+
+cd ..
+cd family
+
+#Copy all types of files ends with 3,4 to family directory:
+# press space after each "\"
+
+cp ~/ex1/music/song3.mp3
+ ~/ex1/music/song4.mp3
+ ~/ex1/pictures/snap3.jpg
+ ~/ex1/pictures/snap4.jpg
+ ~/ex1/videos/film3.avi
+ ~/ex1/videos/film4.avi
+ .
+ 
+ # chang directory going into work directory:
+ 
+cd ..
+cd work
+ 
+ #Copy all types of files ends with 5,6 to work directory:
+ # press space after each "\"
+
+ cp\
+>  ~/ex1/music/song5/mp3\
+>  ~/ex1/music/song6.mp3\
+>  ~/ex1/videos/film5.avi\
+>  ~/ex1/videos/film6.avi\
+>  ~/ex1/pictures/snap5.jpg\
+>  ~/ex1/pictures/snap6/jpg\
+
+# chang directory going out work directory:
+
+ cd ..
+ 
+ #removing friends and work directory
+ 
+ rm -ri friends work
+ 
+ # chang directory going into family directory:
+ 
+ cd family
+ 
+ #removing files in  family directory:
+ 
+ rm song3.mp3 song4.mp3 film3.avi film4.avi snap3.jpg snap4.jpg
+ 
+ #going outside family directory:
+ cd ..
+ 
+ #removing family directory:
+ 
+rm family
+
+#finishing the lab
+exit
