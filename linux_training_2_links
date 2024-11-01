@@ -1,0 +1,77 @@
+#****** Making links between files page 79**********
+#2/11/2024
+#Shaker samiy (shaker.samiy@gmail.com -- +201068448613)
+
+#making a directory(exercies2) to practice your training:
+
+mkdir exercies2
+
+#change directory going into exercies2:
+
+cd exercies2
+
+#making 3 new files as orginal files:
+
+touch original_file1 original_file2 original_file3
+
+#check the link counk for these files:
+ls -l original_file1 original_file2 original_file3
+
+#creating a hard link pointing original_file1:
+
+ln original_file1 hloriginal_file1
+
+#checking the link count, permission fot original_file 1 and its hard link:
+
+ls -l original_file1 hloriginal_file1
+
+#creating a soft link pointing original_file2:
+
+ln -s original_file2 sloriginal_file2
+
+#checking the link count, permission fot original_file 2 and its hard link:
+
+ls -l original_file2 sloriginal_file2
+
+#creating a hard link pointing original_file3:
+
+ln original_file3 hloriginal_file3
+
+#creating a soft link pointing original_file3:
+
+ln -s original_file3 hloriginal_file3
+
+#checking the link count, permission fot original_file3 and their hard and soft links:
+ls -l original_file3 hloriginal_file3 sloriginal_file3
+
+#creating a soft link pointing the soft link of original_file3:
+
+ln -s sloriginal_file3 slsloriginal_file3
+
+#checking the link count, permission fot original_file3 and two soft links:
+
+ls -l original_file3 sloriginal_file3 slsloriginal_file3
+
+#creating a soft link pointing the hard link of original_file3:
+
+ln -s hloriginal_file3 slhloriginal_file3
+
+#checking the link count, permission fot original_file3 and  soft and links:
+
+ls -l original_file3 hloriginal_file3 slhloriginal_file3
+
+#removing the all types of links
+
+rm hloriginal_file1 sloriginal_file2 hloriginal_file3 sloriginal_file3
+
+more cases for upcomong work:
+removing the link even or hard and try to acces the files
+removing the hard link of file that have another soft link and try to acces it 
+removing the soft link of file that have another hard link and try to acces it 
+checking the size of links hard or soft
+
+#clearing the training:
+rmdir -i exercise2
+
+#finishing the training
+exit
