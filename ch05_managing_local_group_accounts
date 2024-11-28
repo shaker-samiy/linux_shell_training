@@ -1,0 +1,66 @@
+#______ System admin 1 exercises _Ch05 _V1______
+[ shaker sami ] [ Big Data Engineer ] [ shaker.samiy@gmail.com ] [ +201068448613 - +201117518670 ]
+#____________________________________________________________________________________________________
+# 1- open new terminal
+
+# 2-login as a root
+>sudo su -
+
+# 3- create a new supplementary group, group_name: operators , group_id:19000
+>groupadd -g 19000 operators
+
+# 4- create a new supplementary group, admin
+>groupadd admin
+
+#5- check the creation of the two groups
+>tail /etc/group
+
+# 6- create 3 users operator01, operator02, operator03
+>useradd -u 16001 operator01
+>useradd -u 16002 operator02
+>useradd -u 16003 operator03
+
+#chech the creation of new users:
+>tail /etc/passwd
+
+# 7- Add these 3 users to the group operators
+>usermod -aG operators operaor01
+>usermod -aG operators operaor02
+>usermod -aG operators operaor03
+
+#8- Check that the uses succesfully add to the group
+
+>id operator01
+>id operator02
+>id operator03
+
+# 9- create 3 users sysadmin01, sysadmin02, sysadmin03
+>useradd -u 207 sysadmin01
+>useradd -u 208 sysadmin02
+>useradd -u 209 sysadmin03
+
+#10- chech the creation of new users:
+>tail /etc/passwd
+
+# 11- Add these 3 users to the group admin
+>usermod -aG admin sysadmin01
+>usermod -aG admin sysadmin02
+>usermod -aG admin sysadmin03
+
+
+#12- Check that the uses succesfully add to the group
+>id sysadmin01
+>id sysadmin02
+>id sysadmin03
+
+#13- exmain
+>tail /etc/group
+
+#14- create /etc/sudoers.d/admin file, such that the members of admon have full administrative prinileges
+>echo "%admin ALL=(ALL) ALL" >> /etc/sudoers.d/admin 
+
+or in more secure way  
+>sudo visudo -f /etc/sudoers.d/admin
+%admin ALL=(ALL) ALL
+
+
